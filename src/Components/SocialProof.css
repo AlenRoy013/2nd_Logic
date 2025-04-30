@@ -1,0 +1,76 @@
+.socialproof-section {
+    padding: 4rem 1rem;
+    background-color: #ffffff;
+  }
+  
+  .socialproof-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .socialproof-heading {
+    max-width: 640px;
+    margin: 0 auto 3rem auto;
+    text-align: center;
+  }
+  
+  .socialproof-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #1e3a8a; /* dark blue */
+  }
+  
+  @media (min-width: 768px) {
+    .socialproof-title {
+      font-size: 2.5rem;
+    }
+  }
+  
+  .socialproof-subtitle {
+    font-size: 1.125rem;
+    color: #6b7280; /* medium gray */
+  }
+  
+  /* Partner Logos */
+  .partner-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .partner-logo img {
+    height: 48px;
+    width: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+  
+  .partner-logo img:hover {
+    filter: grayscale(0%);
+  }
+  
+  /* Testimonials Section */
+  .testimonials-placeholder {
+    margin-top: 5rem;
+    text-align: center;
+  }
+  
+  .testimonials-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+  }
+  
+  .testimonials-text {
+    font-size: 1rem;
+    font-style: italic;
+    color: #6b7280;
+  }
+  

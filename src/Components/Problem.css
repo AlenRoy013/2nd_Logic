@@ -1,0 +1,164 @@
+.problem-section {
+    background-color: #F8F9FC; /* Light gray/blue background */
+    padding: 4rem 1rem;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Subtle grid pattern overlay */
+  .problem-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      linear-gradient(rgba(95, 77, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(95, 77, 255, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    z-index: 1;
+  }
+  
+  .problem-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .problem-heading {
+    max-width: 640px;
+    margin: 0 auto 4rem auto;
+    text-align: center;
+  }
+  
+  .problem-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: #111111; /* Dark text for contrast */
+    letter-spacing: -0.5px;
+    position: relative;
+  }
+  
+  .problem-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #5F4DFF, #8A70FF);
+    border-radius: 3px;
+  }
+  
+  @media (min-width: 768px) {
+    .problem-title {
+      font-size: 2.5rem;
+    }
+  }
+  
+  .problem-subtitle {
+    font-size: 1.125rem;
+    color: #4D4D60; /* Darker gray for contrast against light background */
+    margin-top: 1.5rem;
+  }
+  
+  .problem-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  
+  @media (min-width: 768px) {
+    .problem-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .problem-card {
+    background-color: #FFFFFF; /* White card background */
+    border-radius: 1rem;
+    border: 1px solid rgba(95, 77, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(95, 77, 255, 0.08);
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .problem-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(95, 77, 255, 0.15);
+    border-color: rgba(95, 77, 255, 0.3);
+  }
+  
+  .problem-icon {
+    background-color: rgba(95, 77, 255, 0.1); /* Subtle purple background */
+    padding: 1rem;
+    border-radius: 9999px;
+    margin-bottom: 1.5rem;
+    display: inline-flex;
+    box-shadow: 0 0 20px rgba(95, 77, 255, 0.1);
+    position: relative;
+    z-index: 2;
+  }
+  
+  .icon {
+    width: 32px;
+    height: 32px;
+    color: #5F4DFF; /* Purple for accent */
+  }
+  
+  .problem-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111111; /* Dark text for contrast */
+    margin-bottom: 0.75rem;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .problem-card-description {
+    font-size: 1rem;
+    color: #4D4D60; /* Medium gray text */
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Emphasize middle card for visual interest */
+  .problem-card:nth-child(2) {
+    border-top: 2px solid #5F4DFF;
+  }
+  
+  .problem-card:nth-child(2) .problem-icon {
+    background-color: rgba(95, 77, 255, 0.15);
+    box-shadow: 0 0 25px rgba(95, 77, 255, 0.2);
+  }
+  
+  /* Add pulsing animation to icons */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(95, 77, 255, 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(95, 77, 255, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(95, 77, 255, 0);
+    }
+  }
+  
+  .problem-card:hover .problem-icon {
+    animation: pulse 2s infinite;
+  }
